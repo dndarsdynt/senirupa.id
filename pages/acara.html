@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/tailChase.js"></script> <!--loading script-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="/img/logo.svg" type="image/svg+xml" />
+    <title>Events Seni</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logoNav">
+          <h2>Senirupa.id</h2>
+        </div>
+        <div class="navigasi">
+          <ul class="listNav">
+            <a href="/index.html" target="_self"><li>Home</li></a>
+            <a href="/pages/jelajahi.html" target="_self"><li>Jelajahi</li></a>
+            <a href="/pages/blog.html" target="_self"><li>Blog</li></a>
+            <a class="active" href="/pages/acara.html" target="_self"><li>Events</li></a>
+          </ul>
+          <div class="profile">
+            <a
+              class="profileUser"
+              style="
+                background: url('https://i.pinimg.com/564x/cf/6e/c4/cf6ec445df41899479978aa16f05c996.jpg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></a>
+            <a class="notification"><i class="fa-regular fa-bell fa-xl"></i></a>
+          </div>
+        </div>
+        <div class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="mainContainer">
+        <div class="mainEvents">
+          <div class="titleEvents">
+            <h1>Ikuti setiap Event untuk melatih skill mu!</h1>
+            <div class="searchbarEvents">
+              <input type="text" placeholder="Cari acara" />
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              <button><span>Buat</span></button>
+            </div>
+          </div>
+          <div class="tabsEvents">
+            <li class="activeEvents">Semua</li>
+            <li>Acara</li>
+            <li>Tantangan Harian</li>
+            <li>Workshop</li>
+            <li>Kompetisi</li>
+          </div>
+          <div class="calendar">
+            <div class="monthTitle">
+              <i class="fa-solid fa-chevron-left fa-xs"></i>
+              <h4>Okt 2024</h4>
+              <i class="fa-solid fa-chevron-right fa-xs"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>M</th>
+                  <th>S</th>
+                  <th>S</th>
+                  <th>R</th>
+                  <th>K</th>
+                  <th>J</th>
+                  <th>S</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                </tr>
+                <tr>
+                  <td>27</td>
+                  <td class="currentDay">28</td>
+                  <td>29</td>
+                  <td>30</td>
+                  <td>31</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="events">
+            <div class="eventsList">
+              <div class="eventWrap">
+                <h3 class="subTitle">Spesial Sumpah Pemuda!</h3>
+                <div class="eventItem">
+                  <img
+                    alt="Digital Art Workshop"
+                    height="60"
+                    src="https://i.pinimg.com/564x/72/16/8c/72168c71080e0fc1ed7c109a131076d4.jpg"
+                    width="60"
+                  />
+                  <div class="eventInfo">
+                    <h3>Digital Art Workshop: Visualisasi Modern Semangat Sumpah Pemuda</h3>
+                    <p>28 Oktober 2024</p>
+                  </div>
+                  <a class="viewButton" href="#"> Lihat</a>
+                </div>
+                <div class="eventItem">
+                  <img
+                    alt="Digital Art Fair"
+                    height="60"
+                    src="https://i.pinimg.com/564x/e3/ed/6f/e3ed6f3b3a312a341ddbb24a5e0bcd21.jpg"
+                  />
+                  <div class="eventInfo">
+                    <h3>Digital Art Fair: Youth Vision of Indonesia</h3>
+                    <p>28 Oktober 2024</p>
+                  </div>
+                  <a class="viewButton" href="#"> Lihat </a>
+                </div>
+                <div class="eventItem">
+                  <img
+                    alt="Poster Digital"
+                    height="60"
+                    src="https://i.pinimg.com/564x/d6/d2/0a/d6d20a4276974db3a2107e43cff54823.jpg"
+                    width="60"
+                  />
+                  <div class="eventInfo">
+                    <h3>National Youth Poster Design Challenge</h3>
+                    <p>28 Oktober 2024</p>
+                  </div>
+                  <a class="viewButton" href="#"> Lihat </a>
+                </div>
+                <div class="eventItem">
+                  <img
+                    alt="Media Workshop"
+                    height="60"
+                    src="https://i.pinimg.com/564x/8d/b0/25/8db025c05bc0ae8f88f92781b210eb8e.jpg"
+                    width="60"
+                  />
+                  <div class="eventInfo">
+                    <h3>Mixed Media Workshop: Menyatukan Indonesia Melalui Seni</h3>
+                    <p>28 Oktober 2024</p>
+                  </div>
+                  <a class="viewButton" href="#"> Lihat </a>
+                </div>
+                <div class="dailyChallenge">
+                    <h2>Tantangan Harian</h2>
+                    <div class="challengeWrap">
+                        <div class="challenge">
+                            <div class="description">
+                            <h3>Tantangan hari ini: #YoungArtistForUnity</h3>
+                            <p>Dalam tantangan ini, peserta diminta untuk menciptakan karya seni yang berfokus pada tema persatuan dan kolaborasi antar pemuda.</p>
+                            <a class="joinButton" href="#">Ikut</a>
+                           </div>
+                           <div class="imageChallenge" style="background-image: url('https://i.pinimg.com/736x/19/bd/d7/19bdd7856cbd19d351e80c283675273e.jpg'); background-size: cover;"></div>
+                        </div>
+                        <div class="challenge">
+                            <div class="description">
+                            <h3>Tantangan hari ini: #SketchYourHeritage</h3>
+                            <p>Peserta diminta untuk menggambar sesuatu yang mewakili warisan budaya daerah mereka. </p>
+                            <a class="joinButton" href="#">Ikut</a>
+                           </div>
+                           <div class="imageChallenge" style="background-image: url('https://i.pinimg.com/736x/7e/b4/48/7eb448f4d6f45ebefa85ab6969a80cd4.jpg'); background-size: cover;"></div>
+                        </div>
+                        <div class="challenge">
+                            <div class="description">
+                            <h3>Tantangan hari ini: #DailyNusantaraArt</h3>
+                            <p>Tantangan ini mengajak peserta untuk menciptakan karya seni yang terinspirasi oleh keindahan alam dan budaya Nusantara.</p>
+                            <a class="joinButton" href="#">Ikut</a>
+                           </div>
+                           <div class="imageChallenge" style="background-image: url('https://i.pinimg.com/564x/c7/d0/ab/c7d0abb54e1ae23fba2c246395aab794.jpg'); background-size: cover;"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loading" style="text-align: center; margin-top: 16px;">
+            <l-tail-chase size="24" speed="1.75" color=#444></l-tail-chase>
+          </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+          <div class="email-section">
+            <p>Ruang tanpa batas untuk kreativitasmu.</p>
+            <div>
+              <input type="email" placeholder="Enter your email" />
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="footer-content">
+            <div class="text-content">
+              <h1>Senirupa.id</h1>
+            </div>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2024 Copyright Senirupa.id - All Right Reversed.</p>
+          </div>
+        </div>
+    </footer>
+  </body>
+</html>

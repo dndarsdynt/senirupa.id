@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> <!--font awesome-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/tailChase.js"></script> <!--loading script-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> <!--animasi script-->
+    <link rel="icon" href="/img/logo.svg" type="image/svg+xml" />
+    <title>Jelajah Seni</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logoNav">
+          <h2>Senirupa.id</h2>
+        </div>
+        <div class="navigasi">
+          <ul class="listNav">
+            <a href="/index.html" target="_self"><li>Home</li></a>
+            <a class="active" href="/pages/jelajahi.html" target="_self"
+              ><li>Jelajahi</li></a
+            >
+            <a href="/pages/blog.html" target="_self"><li>Blog</li></a>
+            <a href="/pages/acara.html" target="_self"><li>Events</li></a>
+          </ul>
+          <div class="profile">
+            <a
+              class="profileUser"
+              style="
+                background: url('https://i.pinimg.com/564x/cf/6e/c4/cf6ec445df41899479978aa16f05c996.jpg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></a>
+            <a
+              class="notification"
+              href="/pages/notification.html"
+              target="_self"
+              ><i class="fa-regular fa-bell fa-xl"></i
+            ></a>
+          </div>
+        </div>
+        <div class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="mainContainer">
+        <div class="mainExplore">
+          <div class="titleExplore">
+            <h1>Jelajahi setiap sudut dari Senirupa.id</h1>
+            <div class="searchbarExplore">
+              <input type="text" placeholder="Cari postingan/profil" />
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              <button><span>Buat</span></button>
+            </div>
+          </div>
+          <div class="tabsExplore">
+            <li class="activeExplore">Untuk anda</li>
+            <li>Postingan</li>
+            <li>Profil</li>
+            <li>Forum</li>
+          </div>
+          <div class="postExplore">
+            <div class="postSide">
+              <div
+                class="imagePost"
+                style="
+                  background: url('https://i.pinimg.com/564x/50/e8/b4/50e8b40f88aacd0f8905d73029c01601.jpg');
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+            </div>
+            <div class="userSide">
+              <div class="user">
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <div
+                    class="profilePicture"
+                    style="
+                      background: url('https://i.pinimg.com/564x/28/62/2c/28622cc6b22bc159ffbb9d8774b2fc2e.jpg');
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <p style="font-weight: 500">annisa_rahman</p>
+                </div>
+                <button class="followButton">Ikuti</button>
+              </div>
+              <div style="max-height: 194px; min-height: 194px">
+                <h2>Satu Dalam Warna Indonesia</h2>
+                <p>
+                  Merah putih bukan sekadar warna, tapi simbol persatuan kita.
+                  Dalam setiap goresan kuas ini, tersimpan semangat Sumpah
+                  Pemuda yang tak pernah pudar. Satu Nusa, Satu Bangsa, Satu
+                  Bahasa - Indonesia!
+                </p>
+                <div class="tags">
+                  <li>#seni</li>
+                  <li>#ilustrasi</li>
+                  <li>#sumpah_pemuda</li>
+                  <li>#pemuda_indonesia</li>
+                  <li>#ilustrator</li>
+                  <li>#art</li>
+                  <li>#bangga_indonesia</li>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="commentSection">
+                  <input type="text" placeholder="Beri Komentar" />
+                  <i class="fa-solid fa-paper-plane fa-lg"></i>
+                </div>
+                <div class="icon">
+                  <div>
+                    <i
+                      class="fa-regular fa-heart heartIcon"
+                      onclick="toggleHeart(this)"
+                    ></i
+                    ><br />
+                    <small>Suka</small>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-comment"></i><br />
+                    <small>Komentar</small>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-hand-holding-dollar"></i><br />
+                    <small>Donasi</small>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-regular fa-bookmark heartIcon"
+                      onclick="toggleHeart(this)"
+                    ></i
+                    ><br />
+                    <small>Simpan</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="postExplore">
+            <div class="postSide">
+              <div
+                class="imagePost"
+                style="
+                  background: url('https://i.pinimg.com/564x/75/84/a6/7584a6fbce4f08ff8763a163ea69c714.jpg');
+                  background-size: cover;
+                  background-position: center;
+                  height: 500px;
+                "
+              ></div>
+            </div>
+            <div class="userSide">
+              <div class="user">
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <div
+                    class="profilePicture"
+                    style="
+                      background: url('https://i.pinimg.com/564x/e2/96/97/e29697f9bc4c829850f6c4e778b5174b.jpg');
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <p style="font-weight: 500">abigailll_16</p>
+                </div>
+                <button class="followButton">Ikuti</button>
+              </div>
+              <div style="max-height: 340px; min-height: 340px">
+                <h2>Healing dengan melukis</h2>
+                <p>
+                  Tidak semua perasaan bisa diungkapkan dengan kata-kata.
+                  Terkadang, hanya warna dan bentuk yang mampu mewakili apa yang
+                  ada di hati. 🖼️
+                </p>
+                <div class="tags">
+                  <li>#seni</li>
+                  <li>#healing</li>
+                  <li>#pelukis_muda_indonesia</li>
+                  <li>#abstrak</li>
+                  <li>#goresan_warna</li>
+                  <li>#art</li>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="commentSection">
+                  <input type="text" placeholder="Beri Komentar" />
+                  <i class="fa-solid fa-paper-plane fa-lg"></i>
+                </div>
+                <div class="icon">
+                  <div>
+                    <i
+                      class="fa-regular fa-heart heartIcon"
+                      onclick="toggleHeart(this)"
+                    ></i
+                    ><br />
+                    <small>Suka</small>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-comment"></i><br />
+                    <small>Komentar</small>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-hand-holding-dollar"></i><br />
+                    <small>Donasi</small>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-regular fa-bookmark heartIcon"
+                      onclick="toggleHeart(this)"
+                    ></i
+                    ><br />
+                    <small>Simpan</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="postExplore">
+            <div class="postSide">
+              <div
+                class="imagePost"
+                style="
+                  background: url('https://i.pinimg.com/564x/87/9f/54/879f544eac8717b3ae2c87db88022e14.jpg');
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+            </div>
+            <div class="userSide">
+              <div class="user">
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <div
+                    class="profilePicture"
+                    style="
+                      background: url('https://i.pinimg.com/564x/e9/e3/03/e9e30379016e4f631e9f5452b0b2dba4.jpg');
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  ></div>
+                  <p style="font-weight: 500">eldiansyahh99</p>
+                </div>
+                <button class="followButton">Ikuti</button>
+              </div>
+              <div style="max-height: 194px; min-height: 194px">
+                <h2>"Momen Sunyi"</h2>
+                <p>
+                  Terkadang kesunyian berbicara lebih keras dari keramaian. Foto
+                  ini menangkap ketenangan yang jarang kita temui di tengah
+                  hiruk pikuk keseharian. 🌅
+                </p>
+                <div class="tags">
+                  <li>#photography</li>
+                  <li>#sepi_bang</li>
+                  <li>#alam</li>
+                  <li>#minimal_photography</li>
+                  <li>#silent_moment</li>
+                  <li>#fotografer</li>
+                  <li>#bangga_indonesia</li>
+                </div>
+              </div>
+              <div class="wrap">
+                <div class="commentSection">
+                  <input type="text" placeholder="Beri Komentar" />
+                  <i class="fa-solid fa-paper-plane fa-lg"></i>
+                </div>
+                <div class="icon">
+                  <div>
+                    <i
+                      class="fa-regular fa-heart heartIcon"
+                      onclick="toggleHeart(this)"
+                    ></i
+                    ><br />
+                    <small>Suka</small>
+                  </div>
+                  <div>
+                    <i class="fa-regular fa-comment"></i><br />
+                    <small>Komentar</small>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-hand-holding-dollar"></i><br />
+                    <small>Donasi</small>
+                  </div>
+                  <div>
+                    <i
+                      class="fa-regular fa-bookmark heartIcon"
+                      onclick="toggleHeart(this)"
+                    ></i
+                    ><br />
+                    <small>Simpan</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="loading" style="text-align: center; margin-top: 16px;">
+          <l-tail-chase size="24" speed="1.75" color=#444></l-tail-chase>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container-footer">
+        <div class="email-section">
+          <p>Ruang tanpa batas untuk kreativitasmu.</p>
+          <div>
+            <input type="email" placeholder="Enter your email" />
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        <div class="footer-content">
+          <div class="text-content">
+            <h1>Senirupa.id</h1>
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Copyright Senirupa.id - All Right Reversed.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleHeart(heartIcon) {
+        const customAlert = document.getElementById("customAlert");
+
+        heartIcon.classList.add("bounce");
+
+        if (heartIcon.classList.contains("fa-regular")) {
+          heartIcon.classList.remove("fa-regular");
+          heartIcon.classList.add("fa-solid");
+          heartIcon.classList.add("filled");
+        } else {
+          heartIcon.classList.remove("fa-solid");
+          heartIcon.classList.add("fa-regular");
+          heartIcon.classList.remove("filled");
+        }
+        setTimeout(() => {
+          heartIcon.classList.remove("bounce");
+        }, 500);
+      }
+    </script>
+  </body>
+</html>
