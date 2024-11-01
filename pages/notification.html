@@ -22,6 +22,11 @@
     <title>Notifikasi</title>
   </head>
   <body>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <main>
       <div class="notificationContainer">
         <div class="sidebar">
@@ -35,19 +40,19 @@
           ></a>
           <ul>
             <li>
-              <a href="#"> Home </a>
+              <a href="/index.html" target="_self"> Home </a>
             </li>
             <li>
-              <a href="#"> Jelajahi </a>
+              <a href="/pages/jelajahi.html" target="_self"> Jelajahi </a>
             </li>
             <li>
-              <a href="#"> Blog </a>
+              <a href="/pages/blog.html" target="_self"> Blog </a>
             </li>
             <li>
-              <a href="#"> Event </a>
+              <a href="/pages/acara.html" target="_self"> Event </a>
             </li>
             <li>
-              <a href="#"> Pengaturan </a>
+              <a href="#" target="_self"> Pengaturan </a>
             </li>
           </ul>
         </div>
@@ -187,5 +192,17 @@
         </div>
       </div>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+
+        menuToggle.addEventListener("click", function () {
+          menuToggle.classList.toggle("active");
+          sidebar.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>

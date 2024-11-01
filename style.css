@@ -208,6 +208,8 @@ nav {
 .profileItem {
   width: 150px;
   text-align: center;
+  display: grid;
+  place-items: center;
 }
 .profileItem h3 {
   font-size: 1.5em;
@@ -274,7 +276,7 @@ nav {
   display: flex;
   justify-content: center;
 }
-.eventItem {
+.eventItem, .activityItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -283,35 +285,39 @@ nav {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 8px;
+}
+.eventItem {
   width: 800px;
 }
-.eventItem img {
+.eventItem img, .activityItem img {
   width: 60px;
   height: 60px;
   border-radius: 10px;
   margin-right: 15px;
 }
-.eventItem .eventInfo {
+.eventItem .eventInfo, .activityItem .eventInfo {
   flex-grow: 1;
 }
-.eventItem .eventInfo h3 {
+.eventItem .eventInfo h3, .activityItem .eventInfo h3 {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
 }
-.eventItem .eventInfo p {
+.eventItem .eventInfo p, .activityItem .eventInfo p {
   margin: 5px 0 0;
   font-size: 14px;
   color: var(--color-gray);
 }
-.eventItem .viewButton {
-  background-color: var(--color-button);
-  color: var(--color-white);
+.eventItem .viewButton, .activityItem .finishButton {
   font-weight: 500;
   font-size: 14px;
   padding: 8px 15px;
   border-radius: 8px;
   text-decoration: none;
+}
+.eventItem .viewButton {
+  background-color: var(--color-button);
+  color: var(--color-white);
 }
 
 /* -----JOIN SECTION---- */
@@ -601,7 +607,8 @@ nav {
 }
 
 /* -----NOTIFY CENTER---- */
-.notificationContainer, .sidebarLoginJoin {
+.notificationContainer,
+.sidebarLoginJoin {
   font-weight: 500;
   display: flex;
 }
@@ -611,6 +618,7 @@ nav {
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   padding: 32px;
+  height: auto;
 }
 .sidebar .profile {
   width: 70px;
@@ -693,6 +701,65 @@ nav {
   background-color: var(--color-background);
 }
 
+/* -----PROFILE----- */
+.profilInfo {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.profilInfo > .profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+.profilInfo h3 {
+  font-size: 24px;
+}
+.profilInfo small {
+  color: var(--color-gray);
+}
+.profilInfo p {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+.profilInfo button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.buttonProfil button:nth-child(1){
+  color: var(--color-white);
+  background-color: var(--color-button);
+}
+.buttonProfil :nth-child(2){
+  color: var(--color-black);
+  background-color: var(--color-background);
+}
+.activityItem .finishButton {
+  background-color: green;
+  color: var(--color-white);
+}
+.contentProfil h1 {
+  margin: 16px 0;
+}
+.follow {
+  display: flex;
+  text-align: center;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.follow p {
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
 /* ------JELAJAHI----- */
 .postExplore {
   display: flex;
@@ -706,7 +773,7 @@ nav {
   justify-content: space-between;
 }
 .commentSection input {
-  width: 330px;
+  width: 300px;
   border: none;
   padding: 12px;
   background-color: #dad8d8;
@@ -726,6 +793,10 @@ nav {
 }
 .userSide {
   width: 50%;
+}
+.custom {
+  max-height: 340px; 
+  min-height: 340px;
 }
 .userSide .icon {
   display: flex;
@@ -804,20 +875,25 @@ nav {
   color: var(--color-button);
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-      transform: scale(1);
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: scale(1);
   }
   40% {
-      transform: scale(1.2);
+    transform: scale(1.2);
   }
   60% {
-      transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 
 .bounce {
-  animation: bounce 0.5s; 
+  animation: bounce 0.5s;
 }
+
 /* ----FOOTER---- */
 footer {
   font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
@@ -896,12 +972,16 @@ footer {
   color: #ffffff;
 }
 
+
+
 /* ----RESPONSIVE---- */
+
+/* -----HOME---- */
 
 /* Responsif untuk tablet */
 @media screen and (max-width: 1024px) {
   .mainContainer {
-    padding: 50px;
+    padding: 80px 50px;
   }
 
   .landingPage h1 {
@@ -922,11 +1002,13 @@ footer {
 
   .profileList {
     flex-wrap: wrap;
+    text-align: center;
   }
 
   .profileItem {
     width: calc(33.33% - 24px);
     margin-bottom: 24px;
+    text-align: center;
   }
 
   .blogList {
@@ -949,6 +1031,7 @@ footer {
   nav {
     flex-direction: column;
     padding: 12px 20px;
+  
   }
 
   .navigasi {
@@ -972,7 +1055,7 @@ footer {
   }
 
   .mainContainer {
-    padding: 30px;
+    padding: 80px 30px;
   }
 
   .landingPage h1 {
@@ -1089,4 +1172,517 @@ footer {
 
 .menu-toggle.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ----JELAJAHI----- */
+/* Responsif untuk tablet */
+@media screen and (max-width: 1024px) {
+  .mainContainer {
+    padding: 80px 50px;
+  }
+
+  .titleExplore {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .searchbarExplore {
+    width: 100%;
+    text-align: center;
+  }
+
+  .searchbarExplore input {
+    width: 70%;
+  }
+
+  .postExplore {
+    flex-direction: column;
+  }
+
+  .postSide, 
+  .userSide {
+    width: 100%;
+  }
+  .custom {
+    min-height: 0px;
+  }
+
+  .imagePost {
+    margin-bottom: 20px;
+  }
+
+  .wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .commentSection {
+    width: 100%;
+  }
+
+  .commentSection input {
+    width: 90%;
+  }
+
+  .icon {
+    justify-content: center;
+  }
+}
+
+/* Responsif untuk smartphone */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+
+  .navigasi {
+    display: none;
+    width: 100%;
+  }
+
+  .navigasi.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listNav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .profile {
+    margin-top: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .mainContainer {
+    padding: 80px 30px;
+  }
+
+  .titleExplore h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .searchbarExplore input {
+    width: 70%;
+  }
+
+  .tabsExplore {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+
+  .tabsExplore li {
+    display: inline-block;
+    padding: 8px 16px;
+  }
+
+  .userSide {
+    padding: 20px 0;
+  }
+
+  .tags {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+
+  .tags li {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  .wrap {
+    padding: 0;
+  }
+
+  .commentSection input {
+    width: 85%;
+  }
+
+  .icon {
+    gap: 24px;
+  }
+}
+
+/* ----BLOG---- */
+/* Responsif untuk tablet */
+@media screen and (max-width: 1024px) {
+  .mainContainer {
+    padding: 80px 50px;
+  }
+
+  .titleBlog {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .searchbarBlog {
+    width: 100%;
+    text-align: center;
+  }
+
+  .searchbarBlog input {
+    width: 70%;
+  }
+
+  .blogList {
+    flex-direction: column;
+  }
+
+  .blogImage,
+  .blogText {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .blogImage {
+    height: 250px;
+    margin-bottom: 20px;
+  }
+
+  .blogText {
+    padding: 0;
+  }
+
+  .blogText h3 {
+    font-size: 1.2em;
+  }
+
+  .tabsBlog {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 12px 0;
+  }
+
+  .tabsBlog li {
+    padding: 8px 16px;
+  }
+}
+
+/* Responsif untuk smartphone */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+
+  .navigasi {
+    display: none;
+    width: 100%;
+  }
+
+  .navigasi.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listNav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .profile {
+    margin-top: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .mainContainer {
+    padding: 80px 20px;
+  }
+
+  .titleBlog h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .searchbarBlog input {
+    width: 70%;
+  }
+  .blogText h3 {
+    font-size: 1.1em;
+  }
+
+  .blogText p {
+    font-size: 14px;
+  }
+
+  .blogText a {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+  }
+}
+
+/* ----EVENTS--- */
+/* Responsif untuk tablet */
+@media screen and (max-width: 1024px) {
+  .mainContainer {
+    padding: 80px 50px;
+  }
+
+  .titleEvents {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .searchbarEvents {
+    width: 100%;
+    text-align: center;
+  }
+
+  .searchbarEvents input {
+    width: 70%;
+  }
+
+  .tabsEvents {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 12px 0;
+  }
+
+  .tabsEvents li {
+    padding: 8px 16px;
+  }
+
+  .calendar {
+    overflow-x: auto;
+  }
+
+  .eventItem {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .eventItem img {
+    margin: 0 auto 15px;
+  }
+
+  .eventInfo {
+    margin-bottom: 15px;
+  }
+
+  .challenge {
+    flex-direction: column;
+  }
+
+  .challenge .description,
+  .challenge .imageChallenge, .joinButton {
+    width: 100%;
+  }
+  .description {
+    order: 2;
+    margin-bottom: 8px;
+  }
+
+  .imageChallenge {
+    order: 1;
+    height: 200px;
+    margin-bottom: 8px;
+  }
+  .dailyChallenge .imageChallenge {
+    margin-left: 0;
+  }
+}
+
+/* Responsif untuk smartphone */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+
+  .navigasi {
+    display: none;
+    width: 100%;
+  }
+
+  .navigasi.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listNav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .profile {
+    margin-top: 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .mainContainer {
+    padding: 80px 20px;
+  }
+
+  .titleEvents h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .searchbarEvents {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .searchbarEvents input {
+    width: 70%;
+  }
+
+  .calendar {
+    font-size: 14px;
+  }
+
+  .eventItem {
+    width: 100%;
+  }
+
+  .eventItem h3 {
+    font-size: 1.1em;
+  }
+
+  .challenge .description h3 {
+    font-size: 1.1em;
+  }
+
+  .challenge .description p {
+    font-size: 14px;
+  }
+}
+
+/* ----LOGIN GABUNG---- */
+/* Styles untuk hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Responsif untuk tablet dan smartphone */
+@media screen and (max-width: 1024px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    width: 250px;
+    background-color: #fff;
+    transition: 0.3s;
+    z-index: 999;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+
+  .sidebar.active {
+    left: 0;
+    place-items: center;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  .sidebar ul a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .loginSection {
+    width: 100%;
+    padding: 60px 20px 20px;
+  }
+
+}
+
+/* Responsif untuk smartphone */
+@media screen and (max-width: 768px) {
+  .loginWrapper {
+    padding: 20px;
+  }
+}
+
+/* ----NOTIF--- */
+
+/* Responsif untuk tablet */
+@media screen and (max-width: 1024px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .content {
+    width: 100%;
+    padding: 60px 20px 20px;
+  }
+
+}
+
+/* Responsif untuk smartphone */
+@media screen and (max-width: 768px) {
+  .content h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .notifications li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 10px;
+  }
+
+  .imageNotify {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .details {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .actions {
+    align-self: flex-end;
+  }
+
+  .details p {
+    font-size: 14px;
+  }
+
+  .time {
+    font-size: 12px;
+  }
 }

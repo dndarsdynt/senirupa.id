@@ -37,7 +37,7 @@
             <a href="/pages/acara.html" target="_self"><li>Events</li></a>
           </ul>
           <div class="profile">
-            <a
+            <a href="/pages/profil.html"
               class="profileUser"
               style="
                 background: url('https://i.pinimg.com/564x/cf/6e/c4/cf6ec445df41899479978aa16f05c996.jpg');
@@ -45,7 +45,7 @@
                 background-position: center;
               "
             ></a>
-            <a class="notification"><i class="fa-regular fa-bell fa-xl"></i></a>
+            <a href="/pages/notification.html" target="_self" class="notification"><i class="fa-regular fa-bell fa-xl"></i></a>
           </div>
         </div>
         <div class="menu-toggle">
@@ -177,5 +177,18 @@
           </div>
         </div>
     </footer>
+
+    <!-- ---SCRIPT HAMBURGER---- -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigasi = document.querySelector(".navigasi");
+
+        menuToggle.addEventListener("click", function () {
+          navigasi.classList.toggle("active");
+          menuToggle.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>

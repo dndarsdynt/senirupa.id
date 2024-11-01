@@ -23,23 +23,21 @@
     <title>Login Senirupa.id</title>
   </head>
   <body>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <main>
       <div class="notificationContainer">
         <div class="sidebar">
-            <a
-            class="profile"
-            style="
-              background: url('https://i.pinimg.com/564x/b7/14/a2/b714a2713d5d9259dab2a7c0b7df4ff9.jpg');
-              background-size: cover;
-              background-position: center;
-            "
-          ></a>
+          <h2>Login</h2>
           <ul>
             <a href="/index.html" target="_self"><li>Home</li></a>
             <a href="/pages/jelajahi.html" target="_self"><li>Jelajahi</li></a>
             <a href="/pages/blog.html" target="_self"><li>Blog</li></a>
             <a href="/pages/acara.html" target="_self"><li>Events</li></a>
-            <a href="/index.html" target="_self"><li>Pengaturan</li></a>
+            <a href="#" target="_self"><li>Pengaturan</li></a>
           </ul>
         </div>
         <div class="loginSection">
@@ -54,47 +52,22 @@
                 <input type="password" placeholder="Password" required />
                 <i class="bx bxs-lock-alt"></i>
               </div>
-  
+
               <div class="rememberForgot">
                 <label><input type="checkbox" /> Ingat saya</label>
                 <a href="#">Lupa kata sandi?</a>
               </div>
-  
+
               <button type="submit" class="btn">Login</button>
-  
+
               <div class="registerLink">
-                <p>Tidak punya akun? <a href="/gabung.html">Gabung</a></p>
+                <p>Tidak punya akun? <a href="/pages/gabung.html">Gabung</a></p>
               </div>
             </form>
           </div>
         </div>
       </div>
     </main>
-    <footer>
-      <div class="container-footer">
-        <div class="email-section">
-          <p>Rumah untuk setiap karyamu.</p>
-          <div>
-            <input type="email" placeholder="Enter your email" />
-            <i class="fas fa-arrow-right"></i>
-          </div>
-        </div>
-        <div class="footer-content">
-          <div class="text-content">
-            <h1>Senirupa.id</h1>
-          </div>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2024 Copyright Senirupa.id - All Right Reversed.</p>
-        </div>
-      </div>
-    </footer>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -102,11 +75,11 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.querySelector(".menu-toggle");
-        const navigasi = document.querySelector(".navigasi");
+        const sidebar = document.querySelector(".sidebar");
 
         menuToggle.addEventListener("click", function () {
-          navigasi.classList.toggle("active");
           menuToggle.classList.toggle("active");
+          sidebar.classList.toggle("active");
         });
       });
     </script>

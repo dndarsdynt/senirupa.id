@@ -39,7 +39,7 @@
             <a href="/pages/acara.html" target="_self"><li>Events</li></a>
           </ul>
           <div class="profile">
-            <a
+            <a href="/pages/profil.html"
               class="profileUser"
               style="
                 background: url('https://i.pinimg.com/564x/cf/6e/c4/cf6ec445df41899479978aa16f05c996.jpg');
@@ -184,7 +184,7 @@
                 </div>
                 <button class="followButton">Ikuti</button>
               </div>
-              <div style="max-height: 340px; min-height: 340px">
+              <div class="custom">
                 <h2>Healing dengan melukis</h2>
                 <p>
                   Tidak semua perasaan bisa diungkapkan dengan kata-kata.
@@ -361,6 +361,18 @@
           heartIcon.classList.remove("bounce");
         }, 500);
       }
+    </script>
+    <!-- ---SCRIPT HAMBURGER---- -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigasi = document.querySelector(".navigasi");
+
+        menuToggle.addEventListener("click", function () {
+          navigasi.classList.toggle("active");
+          menuToggle.classList.toggle("active");
+        });
+      });
     </script>
   </body>
 </html>

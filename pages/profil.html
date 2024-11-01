@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="/img/logo.svg" type="image/svg+xml" />
+    <title>Profil Anda</title>
+  </head>
+  <body>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <main>
+      <div class="notificationContainer">
+        <div class="sidebar">
+            <h2>Profil Anda</h2>
+          <ul>
+            <li>
+              <a href="/index.html" target="_self"> Home </a>
+            </li>
+            <li>
+              <a href="/pages/jelajahi.html" target="_self"> Jelajahi </a>
+            </li>
+            <li>
+              <a href="/pages/blog.html" target="_self"> Blog </a>
+            </li>
+            <li>
+              <a href="/pages/acara.html" target="_self"> Event </a>
+            </li>
+            <li>
+              <a href="#" target="_self"> Pengaturan </a>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="profilInfo">
+            <a
+              class="profile"
+              style="
+                background: url('https://i.pinimg.com/564x/cf/6e/c4/cf6ec445df41899479978aa16f05c996.jpg');
+                background-size: cover;
+                background-position: center;
+              "
+            ></a>
+            <h3>Malasari</h3>
+            <div class="follow">
+                <div>
+                    <p>12</p>
+                    <p>Mengikuti</p>
+                </div>
+                <div>
+                    <p>34</p>
+                    <p>Pengikut</p>
+                </div>
+            </div>
+            <small>Desainer</small>
+            <p>UI/UX Enthusiast, Design is my life.</p>
+            <div class="buttonProfil">
+              <button><a>Edit Profil</a></button>
+              <button><a>Bagikan Profil</a></button>
+            </div>
+          </div>
+          <div class="tabsExplore">
+            <li class="activeExplore">Semua</li>
+            <li>Postingan</li>
+            <li>Aktivitas</li>
+            <li>Interaksi</li>
+          </div>
+          <div class="contentProfil">
+            <h1>Postingan Terbaru</h1>
+            <div class="postExplore">
+              <div class="postSide">
+                <div
+                  class="imagePost"
+                  style="
+                    background: url('https://i.pinimg.com/564x/ff/16/87/ff168743c7c731436a93da32fbb63329.jpg');
+                    background-size: cover;
+                    background-position: center;
+                  "
+                ></div>
+              </div>
+              <div class="userSide">
+                <div class="user">
+                  <div style="display: flex; align-items: center; gap: 8px">
+                    <div
+                      class="profilePicture"
+                      style="
+                        background: url('https://i.pinimg.com/564x/cf/6e/c4/cf6ec445df41899479978aa16f05c996.jpg');
+                        background-size: cover;
+                        background-position: center;
+                      "
+                    ></div>
+                    <p style="font-weight: 500">Malasari</p>
+                  </div>
+                </div>
+                <div style="max-height: 194px; min-height: 194px">
+                  <h2>UI/UX Design Mobile App</h2>
+                  <p>
+                    Desain aplikasi mobile untuk aplikasi traveling dengan gaya musim panas yang colorfull!
+                  </p>
+                  <div class="tags">
+                    <li>#seni</li>
+                    <li>#ilustrasi</li>
+                    <li>#uiux</li>
+                    <li>#desainer_indonesia</li>
+                    <li>#ilustrator</li>
+                    <li>#art</li>
+                  </div>
+                </div>
+                <div class="wrap">
+                  <div class="commentSection">
+                    <input type="text" placeholder="Beri Komentar" />
+                    <i class="fa-solid fa-paper-plane fa-lg"></i>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i
+                        class="fa-regular fa-heart heartIcon"
+                        onclick="toggleHeart(this)"
+                      ></i
+                      ><br />
+                      <small>Suka</small>
+                    </div>
+                    <div>
+                      <i class="fa-regular fa-comment"></i><br />
+                      <small>Komentar</small>
+                    </div>
+                    <div>
+                      <i class="fa-solid fa-hand-holding-dollar"></i><br />
+                      <small>Donasi</small>
+                    </div>
+                    <div>
+                      <i
+                        class="fa-regular fa-bookmark heartIcon"
+                        onclick="toggleHeart(this)"
+                      ></i
+                      ><br />
+                      <small>Simpan</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1>Aktivitas Terbaru</h1>
+            <div class="activityItem">
+              <img
+                alt="Digital Art Workshop"
+                height="60"
+                src="https://i.pinimg.com/564x/72/16/8c/72168c71080e0fc1ed7c109a131076d4.jpg"
+                width="60"
+              />
+              <div class="eventInfo">
+                <h3>Kamu telah mengikuti Digital Art Workshop: Visu..</h3>
+                <p>28 Oktober 2024</p>
+              </div>
+              <a class="finishButton" href="#">Selesai</a>
+            </div>
+            <div class="activityItem">
+              <img
+                alt="Digital Art Workshop"
+                height="60"
+                src="https://i.pinimg.com/736x/19/bd/d7/19bdd7856cbd19d351e80c283675273e.jpg"
+                width="60"
+              />
+              <div class="eventInfo">
+                <h3>Kamu telah menyelesaikan Tantangan hari ini: #YoungArt..</h3>
+                <p>28 Oktober 2024</p>
+              </div>
+              <a class="finishButton" href="#">Selesai</a>
+            </div>
+            <div class="activityItem">
+              <img
+                alt="Digital Art Workshop"
+                height="60"
+                src="https://i.pinimg.com/736x/7e/b4/48/7eb448f4d6f45ebefa85ab6969a80cd4.jpg"
+                width="60"
+              />
+              <div class="eventInfo">
+                <h3>Kamu telah menyelesaikan Tantangan hari ini: #SketchYo..</h3>
+                <p>28 Oktober 2024</p>
+              </div>
+              <a class="finishButton" href="#">Selesai</a>
+            </div>
+            <h1 style="margin-top: 24px;">Forum yang Kamu ikuti</h1>
+            <div class="cardCommunity">
+                <div class="communityList">
+                    <div
+                    class="communityImage"
+                    style="
+                        background-image: url('https://i.pinimg.com/564x/82/7f/8c/827f8c8170a5842d2560da75249117af.jpg');
+                        background-size: cover;
+                    "
+                    ></div>
+                    <p>UI/UX</p>
+                    <small>9.2rb anggota</small>
+                </div>
+                <div class="communityList">
+                    <div
+                    class="communityImage"
+                    style="
+                        background-image: url('https://i.pinimg.com/564x/88/8f/5c/888f5c545644dd19fe14ad13de0f99ce.jpg');
+                        background-size: cover;
+                    "
+                    ></div>
+                    <p>Seni Digital</p>
+                    <small>8.1rb anggota</small>
+                </div>
+                <div class="communityList">
+                    <div
+                    class="communityImage"
+                    style="
+                        background-image: url('https://i.pinimg.com/564x/47/98/66/4798664b04458d7f41fe0f6d7ce2ad26.jpg');
+                        background-size: cover;
+                    "
+                    ></div>
+                    <p>Pemula</p>
+                    <small>35.2rb anggota</small>
+                </div>
+                <div class="communityList">
+                    <div
+                    class="communityImage"
+                    style="
+                        background-image: url('https://i.pinimg.com/564x/bc/99/12/bc9912d36b0ddf6753c5d876bf4a1f54.jpg');
+                        background-size: cover;
+                    "
+                    ></div>
+                    <p>Web Design</p>
+                    <small>13.2rb anggota</small>
+                </div>
+          </div>  
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+          <div class="email-section">
+            <p>Ruang tanpa batas untuk kreativitasmu.</p>
+            <div>
+              <input type="email" placeholder="Enter your email" />
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="footer-content">
+            <div class="text-content">
+              <h1>Senirupa.id</h1>
+            </div>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2024 Copyright Senirupa.id - All Right Reversed.</p>
+          </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const menuToggle = document.querySelector(".menu-toggle");
+          const sidebar = document.querySelector(".sidebar");
+  
+          menuToggle.addEventListener("click", function () {
+            menuToggle.classList.toggle("active");
+            sidebar.classList.toggle("active");
+          });
+        });
+    </script>
+  </body>
+</html>
